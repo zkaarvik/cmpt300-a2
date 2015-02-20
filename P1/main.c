@@ -2,7 +2,7 @@
 #include <stdint.h>
 #include <time.h>
 
-#define NUM_SAMPLES 10000
+#define NUM_SAMPLES 10000000
 
 unsigned long long timespecDiff(struct timespec *timeA_p, struct timespec *timeB_p)
 {
@@ -13,75 +13,61 @@ unsigned long long timespecDiff(struct timespec *timeA_p, struct timespec *timeB
 void min_function() {}
 
 //FN to find gettime overhead???
-void find_gettime_overhead()
+unsigned long long find_loop_overhead()
 {
     struct timespec start, stop, dummy;
-    long long unsigned total_time = 0;
 
     clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &start);
 
-    //Repeat 20 times, no loops
-    //FIX: NOT ACCOUNTING FOR SWITCHING
-    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &dummy);
-    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &dummy);
-    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &dummy);
-    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &dummy);
-    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &dummy);
-    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &dummy);
-    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &dummy);
-    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &dummy);
-    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &dummy);
-    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &dummy);
-    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &dummy);
-    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &dummy);
-    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &dummy);
-    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &dummy);
-    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &dummy);
-    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &dummy);
-    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &dummy);
-    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &dummy);
-    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &dummy);
-    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &dummy);
+    int i;
+    for (i = 0; i < NUM_SAMPLES; i++)
+    {
+        //clock_gettime(CLOCK_MONOTONIC, &dummy);
+        //clock_gettime(CLOCK_MONOTONIC, &dummy);
+    }
 
     clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &stop);
 
-    printf("Measured gettime overhead: %llu\n", timespecDiff(&stop, &start));
+    printf("DEBUG: LOOP OVH: %f\n", (double) timespecDiff(&stop, &start) / NUM_SAMPLES);
+    return timespecDiff(&stop, &start) / NUM_SAMPLES;
 }
 
 
 void find_func_call_cost()
 {
     struct timespec start, stop;
-    long long unsigned total_time = 0;
-
+    unsigned long long total_time = 0;
     int i;
+
+    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &start);
     for (i = 0; i < NUM_SAMPLES; i++)
     {
-        clock_gettime(CLOCK_MONOTONIC, &start);
         min_function();
-        clock_gettime(CLOCK_MONOTONIC, &stop);
 
-        total_time += timespecDiff(&stop, &start);
     }
+    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &stop);
+    total_time = timespecDiff(&stop, &start);
 
-    printf("Measured function call cost: %llu\n", total_time / NUM_SAMPLES);
+    printf("DEBUG: W/O ACC FOR LOOP OVH: %f\n", (double) total_time / NUM_SAMPLES);
+    printf("Measured function call cost: %f\n", ((double) total_time / NUM_SAMPLES) - find_loop_overhead());
 }
 
 void find_sys_call_cost()
 {
     struct timespec start, stop;
-    long long unsigned total_time = 0;
-
+    unsigned long long total_time = 0;
     int i;
+
+    clock_gettime(CLOCK_MONOTONIC, &start);
     for (i = 0; i < NUM_SAMPLES; i++)
     {
-        clock_gettime(CLOCK_MONOTONIC, &start);
         getpid();
-        clock_gettime(CLOCK_MONOTONIC, &stop);
-        total_time += timespecDiff(&stop, &start);
     }
+    clock_gettime(CLOCK_MONOTONIC, &stop);
+    total_time = timespecDiff(&stop, &start);
 
-    printf("Measured function call cost: %llu\n", total_time / NUM_SAMPLES);
+    printf("DEBUG: W/O ACC FOR LOOP OVH: %f\n", (double) total_time / NUM_SAMPLES);
+    printf("Measured function call cost: %f\n", ((double) total_time / NUM_SAMPLES) - find_loop_overhead());
 }
 
 void find_proc_switch_cost()
@@ -132,9 +118,9 @@ int main()
             find_thread_switch_cost();
             break;
         case '5':
-            find_gettime_overhead();
+            find_loop_overhead();
             break;
-            //return 0;
+        //return 0;
         default:
             printf("Invalid choice...\n");
         }
