@@ -264,18 +264,10 @@ int main()
             find_sys_call_cost();
             break;
         case '3':
-            for(i=0;i<100;i++)
-            {
             find_proc_switch_cost();
-            usleep(10000);
-            }
             break;
         case '4':
-            for(i=0;i<100;i++)
-            {
             find_thread_switch_cost();
-            usleep(10000);
-            }
             break;
         case '5':
             return 0;
