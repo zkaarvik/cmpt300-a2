@@ -88,7 +88,6 @@ void find_sys_call_cost()
     printf("Measured system call cost: %f\n", ((double) total_time / NUM_SAMPLES_LARGE) - find_loop_overhead());
 }
 
-//////clock_gettime(CLOCK_MONOTONIC, &start);
 void find_proc_switch_cost()
 {
     pid_t child_pid;
@@ -239,6 +238,7 @@ void find_thread_switch_cost()
 int main()
 {
     char user_choice;
+    int i;
 
     set_cpu_affinity();
 
@@ -264,10 +264,18 @@ int main()
             find_sys_call_cost();
             break;
         case '3':
+            for(i=0;i<100;i++)
+            {
             find_proc_switch_cost();
+            usleep(10000);
+            }
             break;
         case '4':
+            for(i=0;i<100;i++)
+            {
             find_thread_switch_cost();
+            usleep(10000);
+            }
             break;
         case '5':
             return 0;
