@@ -1,2 +1,9 @@
 ***PART1***
 
+For part 1 my executable is named 'exec'
+
+Compiled with just 'make'
+
+My program gives a choice of what to measure. It is taking the measurements over a large number of repitions, 10 million for measuring function and system calls, and 1 million times for process and thread switching.
+
+Choosing which case to measure is done by inputting a number from 1-4 when prompted. Running the executable will explain the choices.

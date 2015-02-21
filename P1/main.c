@@ -166,9 +166,73 @@ void find_proc_switch_cost()
     }
 }
 
+int c = 0;
+int t1_lock = 0, t2_lock = 0;
+pthread_mutex_t mutex;
+
+void *fnC()
+{
+    while(c != 2)
+    {
+        if(t1_lock == 1)
+        {
+            pthread_mutex_lock(&mutex); 
+            t2_lock = 1;
+            c = 0;
+        }
+
+        if(t1_lock == 0)
+        {
+            pthread_mutex_unlock(&mutex);
+            t2_lock = 0;
+        }
+    }    
+}
+
 void find_thread_switch_cost()
 {
+    int i;
+    c = 0;
 
+    struct timespec start, stop;
+    unsigned long long total_time = 0;
+
+    int rt1;
+    pthread_t t1;
+
+    //Create a child thread
+    if( (rt1=pthread_create( &t1, NULL, &fnC, NULL)) )
+    {
+        printf("Thread creation failed: %d\n", rt1);
+    }
+
+    clock_gettime(CLOCK_MONOTONIC, &start);
+
+    //Parent thread
+    for(i = 0; i < NUM_SAMPLES_LARGE;)
+    {
+        if(t2_lock == 1)
+        {
+            pthread_mutex_lock(&mutex);
+            t1_lock = 1;
+            c = 1;
+        }
+
+        if(t2_lock == 0)
+        {
+            pthread_mutex_unlock(&mutex);
+            t1_lock = 0;
+            i++;
+        }
+    }
+    c = 2;
+
+    clock_gettime(CLOCK_MONOTONIC, &stop); 
+
+    pthread_join(t1, NULL);
+
+    total_time = timespecDiff(&stop, &start);
+    printf("Measured thread switch cost: %f\n", (double) total_time / (NUM_SAMPLES_LARGE * 2));
 }
 
 
