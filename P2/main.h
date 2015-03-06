@@ -3,6 +3,7 @@
 #include <pthread.h>
 #include <stdint.h>
 #include <time.h>
+#include <unistd.h>
 #include "sync.h"
 
 int c = 0;
