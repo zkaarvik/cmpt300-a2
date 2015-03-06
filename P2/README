@@ -2,7 +2,3 @@ To compile: make
 Executable: mylocks
 
 Usage of the executable is explained on runtime
-
-In my implementation of spinlocks I have not made use of the functions my_spinlock_destroy or my_spinlock_trylock. I did not find implementing them was necessary to produce a working spinlock.
-
-Why starvation isn't occuring..

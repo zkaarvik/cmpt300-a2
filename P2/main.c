@@ -318,7 +318,7 @@ int main(int argc, char *argv[])
 	//testAndSetExample(); //Uncomment this line to see how to use TAS
 	
 	processInput(argc,argv);
-	runTest(testID);
+	runTest(testID); 
 	return 0;
 
 }

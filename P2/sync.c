@@ -18,7 +18,6 @@
 
 int my_spinlock_init(my_spinlock_t *lock)
 {
-	//lock->isLocked = malloc(sizeof(unsigned long));
 	lock->isLocked = 0;
 	lock->recursion_count = 0;
 	lock->owner = 0;
@@ -27,6 +26,7 @@ int my_spinlock_init(my_spinlock_t *lock)
 
 int my_spinlock_destroy(my_spinlock_t *lock)
 {
+	//nothing to destroy
 }
 
 int my_spinlock_unlock(my_spinlock_t *lock)
@@ -42,14 +42,11 @@ int my_spinlock_unlock(my_spinlock_t *lock)
 
 int my_spinlock_lockTAS(my_spinlock_t *lock)
 {
-	//printf("Attempting to lock.. \ttid: %02x\n", pthread_self());
-
 	pthread_t cur_thread_id = pthread_self();
 
 	//If the owner relocks, increase resursion count
 	if(pthread_equal(lock->owner, cur_thread_id))
 	{
-		//printf("Already locked.. \ttid: %02x\n", cur_thread_id);
 		lock->recursion_count++;
 		return 0;
 	}
@@ -60,8 +57,6 @@ int my_spinlock_lockTAS(my_spinlock_t *lock)
 	//Thread aquires lock for the first time
 	lock->owner = cur_thread_id;
 	lock->recursion_count = 1;
-
-	//printf("Lock aquired.. \t\ttid: %02x\n", cur_thread_id);
 
 	return 0;
 }
@@ -87,7 +82,6 @@ int my_spinlock_lockTTAS(my_spinlock_t *lock)
 				lock->owner = cur_thread_id;
 				lock->recursion_count = 1;
 
-				//printf("Lock aquired.. \t\ttid: %02x\n", cur_thread_id);
 				return 0;
 			}
 		}
@@ -96,6 +90,26 @@ int my_spinlock_lockTTAS(my_spinlock_t *lock)
 
 int my_spinlock_trylock(my_spinlock_t *lock)
 {
+	//Try lock, if obtained return 0, if not return -1
+	pthread_t cur_thread_id = pthread_self();
+
+	//If the owner relocks, increase resursion count
+	if(pthread_equal(lock->owner, cur_thread_id))
+	{
+		lock->recursion_count++;
+		return 0;
+	}
+
+	//Non-owner thread trying to lock
+	if(tas(&lock->isLocked)) {
+		return -1;
+	}
+
+	//Thread aquires 
+	lock->owner = cur_thread_id;
+	lock->recursion_count = 1;
+
+	return 0;
 }
 
 
@@ -113,6 +127,7 @@ int my_mutex_init(my_mutex_t *mutex)
 
 int my_mutex_destroy(my_mutex_t *mutex)
 {
+	//nothing to destroy
 }
 
 int my_mutex_unlock(my_mutex_t *mutex)
@@ -134,14 +149,12 @@ int my_mutex_lockTAS(my_mutex_t *mutex)
 	//If the owner relocks, increase resursion count
 	if(pthread_equal(mutex->owner, cur_thread_id))
 	{
-		//printf("Already locked.. \ttid: %02x\n", cur_thread_id);
 		mutex->recursion_count++;
 		return 0;
 	}
 
 	//Non-owner thread trying to lock
 	while(tas(&mutex->isLocked)) {
-		//printf("Sleeping: %dus\n", cur_delay);
 		usleep(cur_delay);
 		if(cur_delay < MAX_DELAY) cur_delay *= 2;
 	}
@@ -177,7 +190,6 @@ int my_mutex_lockTTAS(my_mutex_t *mutex)
 
 				return 0;
 			}
-			//printf("Sleeping: %dus\n", cur_delay);
 			usleep(cur_delay);
 			if(cur_delay < MAX_DELAY) cur_delay *= 2;
 		}
@@ -186,6 +198,26 @@ int my_mutex_lockTTAS(my_mutex_t *mutex)
 
 int my_mutex_trylock(my_mutex_t *mutex)
 {
+	pthread_t cur_thread_id = pthread_self();
+
+	//If the owner relocks, increase resursion count
+	if(pthread_equal(mutex->owner, cur_thread_id))
+	{
+		//printf("Already locked.. \ttid: %02x\n", cur_thread_id);
+		mutex->recursion_count++;
+		return 0;
+	}
+
+	//Non-owner thread trying to lock
+	if(tas(&mutex->isLocked)) {
+		return -1;
+	}
+
+	//Thread aquires lock for the first time
+	mutex->owner = cur_thread_id;
+	mutex->recursion_count = 1;
+
+	return 0;
 }
 
 
