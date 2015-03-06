@@ -12,6 +12,7 @@ void *fnC()
 
 
 pthread_mutex_t count_mutex;
+pthread_spinlock_t count_spinlock;
 my_spinlock_t count_my_spinlock;
 my_mutex_t count_my_mutex;
 
@@ -24,6 +25,17 @@ void *pthreadMutexTest()
 		pthread_mutex_lock(&count_mutex);
 		c++;
 		pthread_mutex_unlock(&count_mutex);    
+    }   
+}
+
+void *pthreadSpinlockTest()
+{
+	int i;
+    for(i=0;i<numItterations;i++)
+    { 
+		pthread_spin_lock(&count_spinlock);
+		c++;
+		pthread_spin_unlock(&count_spinlock);    
     }   
 }
 
@@ -116,7 +128,30 @@ int runTest(int testID)
 
 	if(testID == 0 || testID == 2) /*Pthread Spinlock*/
 	{
+		c=0;
+
+		pthread_spin_init(&count_spinlock, PTHREAD_PROCESS_SHARED);
+
+		clock_gettime(CLOCK_MONOTONIC, &start);
+		for(i=0;i<numThreads;i++)
+		{
+			if( rt=(pthread_create( threads+i, NULL, &pthreadSpinlockTest, NULL)) )
+			{
+				printf("Thread creation failed: %d\n", rt);
+				return -1;	
+			}
 		
+		}
+		
+		for(i=0;i<numThreads;i++) //Wait for all threads to finish
+		{
+			 pthread_join(threads[i], NULL);
+		}
+		clock_gettime(CLOCK_MONOTONIC, &stop);
+
+		printf("Threaded Run Pthread (Spinlock) Total Count: %d\n", c);
+		result=timespecDiff(&stop,&start);
+		printf("Pthread Spinlock time(ms): %llu\n",result/1000000);
 	}
 
 	if(testID == 0 || testID == 3) /*MySpinlockTAS*/
