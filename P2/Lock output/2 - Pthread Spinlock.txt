@@ -1,0 +1,302 @@
+Usage of: ./mylocks -t #threads -i #itterations -d testid
+testid: 0=all, 1=pthreadMutex, 2=pthreadSpinlock, 3=mySpinLockTAS, 4=mySpinLockTTAS, 5=myMutexTAS, 6=myMutexTTAS
+Threads: 1
+Threaded Run Pthread (Spinlock) Total Count: 1000000
+Pthread Spinlock time(ms): 16
+Threads: 1
+Threaded Run Pthread (Spinlock) Total Count: 1000000
+Pthread Spinlock time(ms): 12
+Threads: 1
+Threaded Run Pthread (Spinlock) Total Count: 1000000
+Pthread Spinlock time(ms): 9
+Threads: 1
+Threaded Run Pthread (Spinlock) Total Count: 1000000
+Pthread Spinlock time(ms): 12
+Threads: 1
+Threaded Run Pthread (Spinlock) Total Count: 1000000
+Pthread Spinlock time(ms): 10
+Threads: 2
+Threaded Run Pthread (Spinlock) Total Count: 2000000
+Pthread Spinlock time(ms): 45
+Threads: 2
+Threaded Run Pthread (Spinlock) Total Count: 2000000
+Pthread Spinlock time(ms): 46
+Threads: 2
+Threaded Run Pthread (Spinlock) Total Count: 2000000
+Pthread Spinlock time(ms): 47
+Threads: 2
+Threaded Run Pthread (Spinlock) Total Count: 2000000
+Pthread Spinlock time(ms): 51
+Threads: 2
+Threaded Run Pthread (Spinlock) Total Count: 2000000
+Pthread Spinlock time(ms): 41
+Threads: 3
+Threaded Run Pthread (Spinlock) Total Count: 3000000
+Pthread Spinlock time(ms): 110
+Threads: 3
+Threaded Run Pthread (Spinlock) Total Count: 3000000
+Pthread Spinlock time(ms): 126
+Threads: 3
+Threaded Run Pthread (Spinlock) Total Count: 3000000
+Pthread Spinlock time(ms): 88
+Threads: 3
+Threaded Run Pthread (Spinlock) Total Count: 3000000
+Pthread Spinlock time(ms): 83
+Threads: 3
+Threaded Run Pthread (Spinlock) Total Count: 3000000
+Pthread Spinlock time(ms): 112
+Threads: 4
+Threaded Run Pthread (Spinlock) Total Count: 4000000
+Pthread Spinlock time(ms): 151
+Threads: 4
+Threaded Run Pthread (Spinlock) Total Count: 4000000
+Pthread Spinlock time(ms): 168
+Threads: 4
+Threaded Run Pthread (Spinlock) Total Count: 4000000
+Pthread Spinlock time(ms): 163
+Threads: 4
+Threaded Run Pthread (Spinlock) Total Count: 4000000
+Pthread Spinlock time(ms): 143
+Threads: 4
+Threaded Run Pthread (Spinlock) Total Count: 4000000
+Pthread Spinlock time(ms): 173
+Threads: 5
+Threaded Run Pthread (Spinlock) Total Count: 5000000
+Pthread Spinlock time(ms): 215
+Threads: 5
+Threaded Run Pthread (Spinlock) Total Count: 5000000
+Pthread Spinlock time(ms): 276
+Threads: 5
+Threaded Run Pthread (Spinlock) Total Count: 5000000
+Pthread Spinlock time(ms): 191
+Threads: 5
+Threaded Run Pthread (Spinlock) Total Count: 5000000
+Pthread Spinlock time(ms): 205
+Threads: 5
+Threaded Run Pthread (Spinlock) Total Count: 5000000
+Pthread Spinlock time(ms): 205
+Threads: 6
+Threaded Run Pthread (Spinlock) Total Count: 6000000
+Pthread Spinlock time(ms): 236
+Threads: 6
+Threaded Run Pthread (Spinlock) Total Count: 6000000
+Pthread Spinlock time(ms): 235
+Threads: 6
+Threaded Run Pthread (Spinlock) Total Count: 6000000
+Pthread Spinlock time(ms): 248
+Threads: 6
+Threaded Run Pthread (Spinlock) Total Count: 6000000
+Pthread Spinlock time(ms): 239
+Threads: 6
+Threaded Run Pthread (Spinlock) Total Count: 6000000
+Pthread Spinlock time(ms): 249
+Threads: 7
+Threaded Run Pthread (Spinlock) Total Count: 7000000
+Pthread Spinlock time(ms): 298
+Threads: 7
+Threaded Run Pthread (Spinlock) Total Count: 7000000
+Pthread Spinlock time(ms): 359
+Threads: 7
+Threaded Run Pthread (Spinlock) Total Count: 7000000
+Pthread Spinlock time(ms): 342
+Threads: 7
+Threaded Run Pthread (Spinlock) Total Count: 7000000
+Pthread Spinlock time(ms): 359
+Threads: 7
+Threaded Run Pthread (Spinlock) Total Count: 7000000
+Pthread Spinlock time(ms): 343
+Threads: 8
+Threaded Run Pthread (Spinlock) Total Count: 8000000
+Pthread Spinlock time(ms): 391
+Threads: 8
+Threaded Run Pthread (Spinlock) Total Count: 8000000
+Pthread Spinlock time(ms): 407
+Threads: 8
+Threaded Run Pthread (Spinlock) Total Count: 8000000
+Pthread Spinlock time(ms): 366
+Threads: 8
+Threaded Run Pthread (Spinlock) Total Count: 8000000
+Pthread Spinlock time(ms): 403
+Threads: 8
+Threaded Run Pthread (Spinlock) Total Count: 8000000
+Pthread Spinlock time(ms): 399
+Threads: 9
+Threaded Run Pthread (Spinlock) Total Count: 9000000
+Pthread Spinlock time(ms): 495
+Threads: 9
+Threaded Run Pthread (Spinlock) Total Count: 9000000
+Pthread Spinlock time(ms): 460
+Threads: 9
+Threaded Run Pthread (Spinlock) Total Count: 9000000
+Pthread Spinlock time(ms): 523
+Threads: 9
+Threaded Run Pthread (Spinlock) Total Count: 9000000
+Pthread Spinlock time(ms): 501
+Threads: 9
+Threaded Run Pthread (Spinlock) Total Count: 9000000
+Pthread Spinlock time(ms): 498
+Threads: 10
+Threaded Run Pthread (Spinlock) Total Count: 10000000
+Pthread Spinlock time(ms): 607
+Threads: 10
+Threaded Run Pthread (Spinlock) Total Count: 10000000
+Pthread Spinlock time(ms): 582
+Threads: 10
+Threaded Run Pthread (Spinlock) Total Count: 10000000
+Pthread Spinlock time(ms): 588
+Threads: 10
+Threaded Run Pthread (Spinlock) Total Count: 10000000
+Pthread Spinlock time(ms): 567
+Threads: 10
+Threaded Run Pthread (Spinlock) Total Count: 10000000
+Pthread Spinlock time(ms): 505
+Threads: 11
+Threaded Run Pthread (Spinlock) Total Count: 11000000
+Pthread Spinlock time(ms): 659
+Threads: 11
+Threaded Run Pthread (Spinlock) Total Count: 11000000
+Pthread Spinlock time(ms): 707
+Threads: 11
+Threaded Run Pthread (Spinlock) Total Count: 11000000
+Pthread Spinlock time(ms): 728
+Threads: 11
+Threaded Run Pthread (Spinlock) Total Count: 11000000
+Pthread Spinlock time(ms): 637
+Threads: 11
+Threaded Run Pthread (Spinlock) Total Count: 11000000
+Pthread Spinlock time(ms): 650
+Threads: 12
+Threaded Run Pthread (Spinlock) Total Count: 12000000
+Pthread Spinlock time(ms): 731
+Threads: 12
+Threaded Run Pthread (Spinlock) Total Count: 12000000
+Pthread Spinlock time(ms): 880
+Threads: 12
+Threaded Run Pthread (Spinlock) Total Count: 12000000
+Pthread Spinlock time(ms): 807
+Threads: 12
+Threaded Run Pthread (Spinlock) Total Count: 12000000
+Pthread Spinlock time(ms): 931
+Threads: 12
+Threaded Run Pthread (Spinlock) Total Count: 12000000
+Pthread Spinlock time(ms): 797
+Threads: 13
+Threaded Run Pthread (Spinlock) Total Count: 13000000
+Pthread Spinlock time(ms): 792
+Threads: 13
+Threaded Run Pthread (Spinlock) Total Count: 13000000
+Pthread Spinlock time(ms): 1076
+Threads: 13
+Threaded Run Pthread (Spinlock) Total Count: 13000000
+Pthread Spinlock time(ms): 824
+Threads: 13
+Threaded Run Pthread (Spinlock) Total Count: 13000000
+Pthread Spinlock time(ms): 867
+Threads: 13
+Threaded Run Pthread (Spinlock) Total Count: 13000000
+Pthread Spinlock time(ms): 898
+Threads: 14
+Threaded Run Pthread (Spinlock) Total Count: 14000000
+Pthread Spinlock time(ms): 831
+Threads: 14
+Threaded Run Pthread (Spinlock) Total Count: 14000000
+Pthread Spinlock time(ms): 976
+Threads: 14
+Threaded Run Pthread (Spinlock) Total Count: 14000000
+Pthread Spinlock time(ms): 1022
+Threads: 14
+Threaded Run Pthread (Spinlock) Total Count: 14000000
+Pthread Spinlock time(ms): 914
+Threads: 14
+Threaded Run Pthread (Spinlock) Total Count: 14000000
+Pthread Spinlock time(ms): 973
+Threads: 15
+Threaded Run Pthread (Spinlock) Total Count: 15000000
+Pthread Spinlock time(ms): 933
+Threads: 15
+Threaded Run Pthread (Spinlock) Total Count: 15000000
+Pthread Spinlock time(ms): 1161
+Threads: 15
+Threaded Run Pthread (Spinlock) Total Count: 15000000
+Pthread Spinlock time(ms): 1110
+Threads: 15
+Threaded Run Pthread (Spinlock) Total Count: 15000000
+Pthread Spinlock time(ms): 1093
+Threads: 15
+Threaded Run Pthread (Spinlock) Total Count: 15000000
+Pthread Spinlock time(ms): 1220
+Threads: 16
+Threaded Run Pthread (Spinlock) Total Count: 16000000
+Pthread Spinlock time(ms): 1337
+Threads: 16
+Threaded Run Pthread (Spinlock) Total Count: 16000000
+Pthread Spinlock time(ms): 1394
+Threads: 16
+Threaded Run Pthread (Spinlock) Total Count: 16000000
+Pthread Spinlock time(ms): 1245
+Threads: 16
+Threaded Run Pthread (Spinlock) Total Count: 16000000
+Pthread Spinlock time(ms): 1112
+Threads: 16
+Threaded Run Pthread (Spinlock) Total Count: 16000000
+Pthread Spinlock time(ms): 1179
+Threads: 17
+Threaded Run Pthread (Spinlock) Total Count: 17000000
+Pthread Spinlock time(ms): 1366
+Threads: 17
+Threaded Run Pthread (Spinlock) Total Count: 17000000
+Pthread Spinlock time(ms): 1424
+Threads: 17
+Threaded Run Pthread (Spinlock) Total Count: 17000000
+Pthread Spinlock time(ms): 1528
+Threads: 17
+Threaded Run Pthread (Spinlock) Total Count: 17000000
+Pthread Spinlock time(ms): 1465
+Threads: 17
+Threaded Run Pthread (Spinlock) Total Count: 17000000
+Pthread Spinlock time(ms): 1356
+Threads: 18
+Threaded Run Pthread (Spinlock) Total Count: 18000000
+Pthread Spinlock time(ms): 1491
+Threads: 18
+Threaded Run Pthread (Spinlock) Total Count: 18000000
+Pthread Spinlock time(ms): 1739
+Threads: 18
+Threaded Run Pthread (Spinlock) Total Count: 18000000
+Pthread Spinlock time(ms): 1861
+Threads: 18
+Threaded Run Pthread (Spinlock) Total Count: 18000000
+Pthread Spinlock time(ms): 1599
+Threads: 18
+Threaded Run Pthread (Spinlock) Total Count: 18000000
+Pthread Spinlock time(ms): 1850
+Threads: 19
+Threaded Run Pthread (Spinlock) Total Count: 19000000
+Pthread Spinlock time(ms): 2003
+Threads: 19
+Threaded Run Pthread (Spinlock) Total Count: 19000000
+Pthread Spinlock time(ms): 1795
+Threads: 19
+Threaded Run Pthread (Spinlock) Total Count: 19000000
+Pthread Spinlock time(ms): 1888
+Threads: 19
+Threaded Run Pthread (Spinlock) Total Count: 19000000
+Pthread Spinlock time(ms): 1753
+Threads: 19
+Threaded Run Pthread (Spinlock) Total Count: 19000000
+Pthread Spinlock time(ms): 1586
+Threads: 20
+Threaded Run Pthread (Spinlock) Total Count: 20000000
+Pthread Spinlock time(ms): 1693
+Threads: 20
+Threaded Run Pthread (Spinlock) Total Count: 20000000
+Pthread Spinlock time(ms): 1925
+Threads: 20
+Threaded Run Pthread (Spinlock) Total Count: 20000000
+Pthread Spinlock time(ms): 2057
+Threads: 20
+Threaded Run Pthread (Spinlock) Total Count: 20000000
+Pthread Spinlock time(ms): 1900
+Threads: 20
+Threaded Run Pthread (Spinlock) Total Count: 20000000
+Pthread Spinlock time(ms): 1812

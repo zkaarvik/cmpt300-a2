@@ -1,0 +1,302 @@
+Usage of: ./mylocks -t #threads -i #itterations -d testid
+testid: 0=all, 1=pthreadMutex, 2=pthreadSpinlock, 3=mySpinLockTAS, 4=mySpinLockTTAS, 5=myMutexTAS, 6=myMutexTTAS
+Threads: 1
+MySpinlockTAS Total Count: 1000000
+MySpinlockTAS time(ms): 19
+Threads: 1
+MySpinlockTAS Total Count: 1000000
+MySpinlockTAS time(ms): 15
+Threads: 1
+MySpinlockTAS Total Count: 1000000
+MySpinlockTAS time(ms): 12
+Threads: 1
+MySpinlockTAS Total Count: 1000000
+MySpinlockTAS time(ms): 11
+Threads: 1
+MySpinlockTAS Total Count: 1000000
+MySpinlockTAS time(ms): 12
+Threads: 2
+MySpinlockTAS Total Count: 2000000
+MySpinlockTAS time(ms): 169
+Threads: 2
+MySpinlockTAS Total Count: 2000000
+MySpinlockTAS time(ms): 197
+Threads: 2
+MySpinlockTAS Total Count: 2000000
+MySpinlockTAS time(ms): 227
+Threads: 2
+MySpinlockTAS Total Count: 2000000
+MySpinlockTAS time(ms): 239
+Threads: 2
+MySpinlockTAS Total Count: 2000000
+MySpinlockTAS time(ms): 224
+Threads: 3
+MySpinlockTAS Total Count: 3000000
+MySpinlockTAS time(ms): 359
+Threads: 3
+MySpinlockTAS Total Count: 3000000
+MySpinlockTAS time(ms): 322
+Threads: 3
+MySpinlockTAS Total Count: 3000000
+MySpinlockTAS time(ms): 344
+Threads: 3
+MySpinlockTAS Total Count: 3000000
+MySpinlockTAS time(ms): 344
+Threads: 3
+MySpinlockTAS Total Count: 3000000
+MySpinlockTAS time(ms): 310
+Threads: 4
+MySpinlockTAS Total Count: 4000000
+MySpinlockTAS time(ms): 572
+Threads: 4
+MySpinlockTAS Total Count: 4000000
+MySpinlockTAS time(ms): 513
+Threads: 4
+MySpinlockTAS Total Count: 4000000
+MySpinlockTAS time(ms): 576
+Threads: 4
+MySpinlockTAS Total Count: 4000000
+MySpinlockTAS time(ms): 547
+Threads: 4
+MySpinlockTAS Total Count: 4000000
+MySpinlockTAS time(ms): 529
+Threads: 5
+MySpinlockTAS Total Count: 5000000
+MySpinlockTAS time(ms): 864
+Threads: 5
+MySpinlockTAS Total Count: 5000000
+MySpinlockTAS time(ms): 880
+Threads: 5
+MySpinlockTAS Total Count: 5000000
+MySpinlockTAS time(ms): 745
+Threads: 5
+MySpinlockTAS Total Count: 5000000
+MySpinlockTAS time(ms): 791
+Threads: 5
+MySpinlockTAS Total Count: 5000000
+MySpinlockTAS time(ms): 897
+Threads: 6
+MySpinlockTAS Total Count: 6000000
+MySpinlockTAS time(ms): 1311
+Threads: 6
+MySpinlockTAS Total Count: 6000000
+MySpinlockTAS time(ms): 1289
+Threads: 6
+MySpinlockTAS Total Count: 6000000
+MySpinlockTAS time(ms): 1230
+Threads: 6
+MySpinlockTAS Total Count: 6000000
+MySpinlockTAS time(ms): 1214
+Threads: 6
+MySpinlockTAS Total Count: 6000000
+MySpinlockTAS time(ms): 1155
+Threads: 7
+MySpinlockTAS Total Count: 7000000
+MySpinlockTAS time(ms): 1678
+Threads: 7
+MySpinlockTAS Total Count: 7000000
+MySpinlockTAS time(ms): 1809
+Threads: 7
+MySpinlockTAS Total Count: 7000000
+MySpinlockTAS time(ms): 1622
+Threads: 7
+MySpinlockTAS Total Count: 7000000
+MySpinlockTAS time(ms): 1738
+Threads: 7
+MySpinlockTAS Total Count: 7000000
+MySpinlockTAS time(ms): 1605
+Threads: 8
+MySpinlockTAS Total Count: 8000000
+MySpinlockTAS time(ms): 2174
+Threads: 8
+MySpinlockTAS Total Count: 8000000
+MySpinlockTAS time(ms): 2120
+Threads: 8
+MySpinlockTAS Total Count: 8000000
+MySpinlockTAS time(ms): 2125
+Threads: 8
+MySpinlockTAS Total Count: 8000000
+MySpinlockTAS time(ms): 2053
+Threads: 8
+MySpinlockTAS Total Count: 8000000
+MySpinlockTAS time(ms): 2130
+Threads: 9
+MySpinlockTAS Total Count: 9000000
+MySpinlockTAS time(ms): 2766
+Threads: 9
+MySpinlockTAS Total Count: 9000000
+MySpinlockTAS time(ms): 2830
+Threads: 9
+MySpinlockTAS Total Count: 9000000
+MySpinlockTAS time(ms): 2645
+Threads: 9
+MySpinlockTAS Total Count: 9000000
+MySpinlockTAS time(ms): 2682
+Threads: 9
+MySpinlockTAS Total Count: 9000000
+MySpinlockTAS time(ms): 2656
+Threads: 10
+MySpinlockTAS Total Count: 10000000
+MySpinlockTAS time(ms): 3395
+Threads: 10
+MySpinlockTAS Total Count: 10000000
+MySpinlockTAS time(ms): 3579
+Threads: 10
+MySpinlockTAS Total Count: 10000000
+MySpinlockTAS time(ms): 3333
+Threads: 10
+MySpinlockTAS Total Count: 10000000
+MySpinlockTAS time(ms): 3637
+Threads: 10
+MySpinlockTAS Total Count: 10000000
+MySpinlockTAS time(ms): 3481
+Threads: 11
+MySpinlockTAS Total Count: 11000000
+MySpinlockTAS time(ms): 4138
+Threads: 11
+MySpinlockTAS Total Count: 11000000
+MySpinlockTAS time(ms): 4199
+Threads: 11
+MySpinlockTAS Total Count: 11000000
+MySpinlockTAS time(ms): 4182
+Threads: 11
+MySpinlockTAS Total Count: 11000000
+MySpinlockTAS time(ms): 4029
+Threads: 11
+MySpinlockTAS Total Count: 11000000
+MySpinlockTAS time(ms): 4094
+Threads: 12
+MySpinlockTAS Total Count: 12000000
+MySpinlockTAS time(ms): 4637
+Threads: 12
+MySpinlockTAS Total Count: 12000000
+MySpinlockTAS time(ms): 4987
+Threads: 12
+MySpinlockTAS Total Count: 12000000
+MySpinlockTAS time(ms): 4774
+Threads: 12
+MySpinlockTAS Total Count: 12000000
+MySpinlockTAS time(ms): 4611
+Threads: 12
+MySpinlockTAS Total Count: 12000000
+MySpinlockTAS time(ms): 4799
+Threads: 13
+MySpinlockTAS Total Count: 13000000
+MySpinlockTAS time(ms): 5962
+Threads: 13
+MySpinlockTAS Total Count: 13000000
+MySpinlockTAS time(ms): 5982
+Threads: 13
+MySpinlockTAS Total Count: 13000000
+MySpinlockTAS time(ms): 5911
+Threads: 13
+MySpinlockTAS Total Count: 13000000
+MySpinlockTAS time(ms): 5819
+Threads: 13
+MySpinlockTAS Total Count: 13000000
+MySpinlockTAS time(ms): 5502
+Threads: 14
+MySpinlockTAS Total Count: 14000000
+MySpinlockTAS time(ms): 6618
+Threads: 14
+MySpinlockTAS Total Count: 14000000
+MySpinlockTAS time(ms): 6473
+Threads: 14
+MySpinlockTAS Total Count: 14000000
+MySpinlockTAS time(ms): 6527
+Threads: 14
+MySpinlockTAS Total Count: 14000000
+MySpinlockTAS time(ms): 6794
+Threads: 14
+MySpinlockTAS Total Count: 14000000
+MySpinlockTAS time(ms): 6762
+Threads: 15
+MySpinlockTAS Total Count: 15000000
+MySpinlockTAS time(ms): 7517
+Threads: 15
+MySpinlockTAS Total Count: 15000000
+MySpinlockTAS time(ms): 7697
+Threads: 15
+MySpinlockTAS Total Count: 15000000
+MySpinlockTAS time(ms): 7472
+Threads: 15
+MySpinlockTAS Total Count: 15000000
+MySpinlockTAS time(ms): 7650
+Threads: 15
+MySpinlockTAS Total Count: 15000000
+MySpinlockTAS time(ms): 7918
+Threads: 16
+MySpinlockTAS Total Count: 16000000
+MySpinlockTAS time(ms): 8348
+Threads: 16
+MySpinlockTAS Total Count: 16000000
+MySpinlockTAS time(ms): 8791
+Threads: 16
+MySpinlockTAS Total Count: 16000000
+MySpinlockTAS time(ms): 8383
+Threads: 16
+MySpinlockTAS Total Count: 16000000
+MySpinlockTAS time(ms): 8626
+Threads: 16
+MySpinlockTAS Total Count: 16000000
+MySpinlockTAS time(ms): 8788
+Threads: 17
+MySpinlockTAS Total Count: 17000000
+MySpinlockTAS time(ms): 9322
+Threads: 17
+MySpinlockTAS Total Count: 17000000
+MySpinlockTAS time(ms): 10204
+Threads: 17
+MySpinlockTAS Total Count: 17000000
+MySpinlockTAS time(ms): 9826
+Threads: 17
+MySpinlockTAS Total Count: 17000000
+MySpinlockTAS time(ms): 9744
+Threads: 17
+MySpinlockTAS Total Count: 17000000
+MySpinlockTAS time(ms): 9534
+Threads: 18
+MySpinlockTAS Total Count: 18000000
+MySpinlockTAS time(ms): 11295
+Threads: 18
+MySpinlockTAS Total Count: 18000000
+MySpinlockTAS time(ms): 11351
+Threads: 18
+MySpinlockTAS Total Count: 18000000
+MySpinlockTAS time(ms): 11208
+Threads: 18
+MySpinlockTAS Total Count: 18000000
+MySpinlockTAS time(ms): 10949
+Threads: 18
+MySpinlockTAS Total Count: 18000000
+MySpinlockTAS time(ms): 10738
+Threads: 19
+MySpinlockTAS Total Count: 19000000
+MySpinlockTAS time(ms): 11949
+Threads: 19
+MySpinlockTAS Total Count: 19000000
+MySpinlockTAS time(ms): 12091
+Threads: 19
+MySpinlockTAS Total Count: 19000000
+MySpinlockTAS time(ms): 12315
+Threads: 19
+MySpinlockTAS Total Count: 19000000
+MySpinlockTAS time(ms): 12187
+Threads: 19
+MySpinlockTAS Total Count: 19000000
+MySpinlockTAS time(ms): 12036
+Threads: 20
+MySpinlockTAS Total Count: 20000000
+MySpinlockTAS time(ms): 13728
+Threads: 20
+MySpinlockTAS Total Count: 20000000
+MySpinlockTAS time(ms): 13504
+Threads: 20
+MySpinlockTAS Total Count: 20000000
+MySpinlockTAS time(ms): 13097
+Threads: 20
+MySpinlockTAS Total Count: 20000000
+MySpinlockTAS time(ms): 13827
+Threads: 20
+MySpinlockTAS Total Count: 20000000
+MySpinlockTAS time(ms): 14891

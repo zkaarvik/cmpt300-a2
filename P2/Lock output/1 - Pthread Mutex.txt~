@@ -1,0 +1,287 @@
+Usage of: ./mylocks -t #threads -i #itterations -d testid
+testid: 0=all, 1=pthreadMutex, 2=pthreadSpinlock, 3=mySpinLockTAS, 4=mySpinLockTTAS, 5=myMutexTAS, 6=myMutexTTAS
+Threads: 1
+Threaded Run Pthread (Mutex) Total Count: 1000000
+Pthread Mutex time(ms): 19
+Threads: 1
+Threaded Run Pthread (Mutex) Total Count: 1000000
+Pthread Mutex time(ms): 19
+Threads: 1
+Threaded Run Pthread (Mutex) Total Count: 1000000
+Pthread Mutex time(ms): 15
+Threads: 1
+Threaded Run Pthread (Mutex) Total Count: 1000000
+Pthread Mutex time(ms): 15
+Threads: 1
+Threaded Run Pthread (Mutex) Total Count: 1000000
+Pthread Mutex time(ms): 15
+Threads: 2
+Threaded Run Pthread (Mutex) Total Count: 2000000
+Pthread Mutex time(ms): 138
+Threads: 2
+Threaded Run Pthread (Mutex) Total Count: 2000000
+Pthread Mutex time(ms): 134
+Threads: 2
+Threaded Run Pthread (Mutex) Total Count: 2000000
+Pthread Mutex time(ms): 134
+Threads: 2
+Threaded Run Pthread (Mutex) Total Count: 2000000
+Pthread Mutex time(ms): 139
+Threads: 2
+Threaded Run Pthread (Mutex) Total Count: 2000000
+Pthread Mutex time(ms): 140
+Threads: 3
+Threaded Run Pthread (Mutex) Total Count: 3000000
+Pthread Mutex time(ms): 471
+Threads: 3
+Threaded Run Pthread (Mutex) Total Count: 3000000
+Pthread Mutex time(ms): 496
+Threads: 3
+Threaded Run Pthread (Mutex) Total Count: 3000000
+Pthread Mutex time(ms): 491
+Threads: 3
+Threaded Run Pthread (Mutex) Total Count: 3000000
+Pthread Mutex time(ms): 496
+Threads: 3
+Threaded Run Pthread (Mutex) Total Count: 3000000
+Pthread Mutex time(ms): 491
+Threads: 4
+Threaded Run Pthread (Mutex) Total Count: 4000000
+Pthread Mutex time(ms): 924
+Threads: 4
+Threaded Run Pthread (Mutex) Total Count: 4000000
+Pthread Mutex time(ms): 775
+Threads: 4
+Threaded Run Pthread (Mutex) Total Count: 4000000
+Pthread Mutex time(ms): 883
+Threads: 4
+Threaded Run Pthread (Mutex) Total Count: 4000000
+Pthread Mutex time(ms): 931
+Threads: 4
+Threaded Run Pthread (Mutex) Total Count: 4000000
+Pthread Mutex time(ms): 875
+Threads: 5
+Threaded Run Pthread (Mutex) Total Count: 5000000
+Pthread Mutex time(ms): 1039
+Threads: 5
+Threaded Run Pthread (Mutex) Total Count: 5000000
+Pthread Mutex time(ms): 874
+Threads: 5
+Threaded Run Pthread (Mutex) Total Count: 5000000
+Pthread Mutex time(ms): 1013
+Threads: 5
+Threaded Run Pthread (Mutex) Total Count: 5000000
+Pthread Mutex time(ms): 1014
+Threads: 5
+Threaded Run Pthread (Mutex) Total Count: 5000000
+Pthread Mutex time(ms): 1032
+Threads: 6
+Threaded Run Pthread (Mutex) Total Count: 6000000
+Pthread Mutex time(ms): 1098
+Threads: 6
+Threaded Run Pthread (Mutex) Total Count: 6000000
+Pthread Mutex time(ms): 1092
+Threads: 6
+Threaded Run Pthread (Mutex) Total Count: 6000000
+Pthread Mutex time(ms): 1044
+Threads: 6
+Threaded Run Pthread (Mutex) Total Count: 6000000
+Pthread Mutex time(ms): 1119
+Threads: 6
+Threaded Run Pthread (Mutex) Total Count: 6000000
+Pthread Mutex time(ms): 1113
+Threads: 7
+Threaded Run Pthread (Mutex) Total Count: 7000000
+Pthread Mutex time(ms): 1198
+Threads: 7
+Threaded Run Pthread (Mutex) Total Count: 7000000
+Pthread Mutex time(ms): 1167
+Threads: 7
+Threaded Run Pthread (Mutex) Total Count: 7000000
+Pthread Mutex time(ms): 1197
+Threads: 7
+Threaded Run Pthread (Mutex) Total Count: 7000000
+Pthread Mutex time(ms): 1220
+Threads: 7
+Threaded Run Pthread (Mutex) Total Count: 7000000
+Pthread Mutex time(ms): 1212
+Threads: 8
+Threaded Run Pthread (Mutex) Total Count: 8000000
+Pthread Mutex time(ms): 1322
+Threads: 8
+Threaded Run Pthread (Mutex) Total Count: 8000000
+Pthread Mutex time(ms): 1320
+Threads: 8
+Threaded Run Pthread (Mutex) Total Count: 8000000
+Pthread Mutex time(ms): 1216
+Threads: 8
+Threaded Run Pthread (Mutex) Total Count: 8000000
+Pthread Mutex time(ms): 1386
+Threads: 8
+Threaded Run Pthread (Mutex) Total Count: 8000000
+Pthread Mutex time(ms): 1281
+Threads: 9
+Threaded Run Pthread (Mutex) Total Count: 9000000
+Pthread Mutex time(ms): 1670
+Threads: 9
+Threaded Run Pthread (Mutex) Total Count: 9000000
+Pthread Mutex time(ms): 1673
+Threads: 9
+Threaded Run Pthread (Mutex) Total Count: 9000000
+Pthread Mutex time(ms): 1680
+Threads: 9
+Threaded Run Pthread (Mutex) Total Count: 9000000
+Pthread Mutex time(ms): 1671
+Threads: 9
+Threaded Run Pthread (Mutex) Total Count: 9000000
+Pthread Mutex time(ms): 1670
+Threads: 10
+Threaded Run Pthread (Mutex) Total Count: 10000000
+Pthread Mutex time(ms): 1857
+Threads: 10
+Threaded Run Pthread (Mutex) Total Count: 10000000
+Pthread Mutex time(ms): 1855
+Threads: 10
+Threaded Run Pthread (Mutex) Total Count: 10000000
+Pthread Mutex time(ms): 1851
+Threads: 10
+Threaded Run Pthread (Mutex) Total Count: 10000000
+Pthread Mutex time(ms): 1868
+Threads: 10
+Threaded Run Pthread (Mutex) Total Count: 10000000
+Pthread Mutex time(ms): 1867
+Threads: 11
+Threaded Run Pthread (Mutex) Total Count: 11000000
+Pthread Mutex time(ms): 2014
+Threads: 11
+Threaded Run Pthread (Mutex) Total Count: 11000000
+Pthread Mutex time(ms): 2030
+Threads: 11
+Threaded Run Pthread (Mutex) Total Count: 11000000
+Pthread Mutex time(ms): 1946
+Threads: 11
+Threaded Run Pthread (Mutex) Total Count: 11000000
+Pthread Mutex time(ms): 2035
+Threads: 11
+Threaded Run Pthread (Mutex) Total Count: 11000000
+Pthread Mutex time(ms): 2034
+Threads: 12
+Threaded Run Pthread (Mutex) Total Count: 12000000
+Pthread Mutex time(ms): 2211
+Threads: 12
+Threaded Run Pthread (Mutex) Total Count: 12000000
+Pthread Mutex time(ms): 2201
+Threads: 12
+Threaded Run Pthread (Mutex) Total Count: 12000000
+Pthread Mutex time(ms): 2189
+Threads: 12
+Threaded Run Pthread (Mutex) Total Count: 12000000
+Pthread Mutex time(ms): 2195
+Threads: 12
+Threaded Run Pthread (Mutex) Total Count: 12000000
+Pthread Mutex time(ms): 2193
+Threads: 13
+Threaded Run Pthread (Mutex) Total Count: 13000000
+Pthread Mutex time(ms): 2288
+Threads: 13
+Threaded Run Pthread (Mutex) Total Count: 13000000
+Pthread Mutex time(ms): 2374
+Threads: 13
+Threaded Run Pthread (Mutex) Total Count: 13000000
+Pthread Mutex time(ms): 2388
+Threads: 13
+Threaded Run Pthread (Mutex) Total Count: 13000000
+Pthread Mutex time(ms): 2389
+Threads: 13
+Threaded Run Pthread (Mutex) Total Count: 13000000
+Pthread Mutex time(ms): 2376
+Threads: 14
+Threaded Run Pthread (Mutex) Total Count: 14000000
+Pthread Mutex time(ms): 2544
+Threads: 14
+Threaded Run Pthread (Mutex) Total Count: 14000000
+Pthread Mutex time(ms): 2525
+Threads: 14
+Threaded Run Pthread (Mutex) Total Count: 14000000
+Pthread Mutex time(ms): 2556
+Threads: 14
+Threaded Run Pthread (Mutex) Total Count: 14000000
+Pthread Mutex time(ms): 2562
+Threads: 14
+Threaded Run Pthread (Mutex) Total Count: 14000000
+Pthread Mutex time(ms): 2560
+Threads: 15
+Threaded Run Pthread (Mutex) Total Count: 15000000
+Pthread Mutex time(ms): 2727
+Threads: 15
+Threaded Run Pthread (Mutex) Total Count: 15000000
+Pthread Mutex time(ms): 2734
+Threads: 15
+Threaded Run Pthread (Mutex) Total Count: 15000000
+Pthread Mutex time(ms): 2734
+Threads: 15
+Threaded Run Pthread (Mutex) Total Count: 15000000
+Pthread Mutex time(ms): 2731
+Threads: 15
+Threaded Run Pthread (Mutex) Total Count: 15000000
+Pthread Mutex time(ms): 2728
+Threads: 16
+Threaded Run Pthread (Mutex) Total Count: 16000000
+Pthread Mutex time(ms): 2901
+Threads: 16
+Threaded Run Pthread (Mutex) Total Count: 16000000
+Pthread Mutex time(ms): 2896
+Threads: 16
+Threaded Run Pthread (Mutex) Total Count: 16000000
+Pthread Mutex time(ms): 2894
+Threads: 16
+Threaded Run Pthread (Mutex) Total Count: 16000000
+Pthread Mutex time(ms): 2899
+Threads: 16
+Threaded Run Pthread (Mutex) Total Count: 16000000
+Pthread Mutex time(ms): 2897
+Threads: 17
+Threaded Run Pthread (Mutex) Total Count: 17000000
+Pthread Mutex time(ms): 3080
+Threads: 17
+Threaded Run Pthread (Mutex) Total Count: 17000000
+Pthread Mutex time(ms): 3069
+Threads: 17
+Threaded Run Pthread (Mutex) Total Count: 17000000
+Pthread Mutex time(ms): 3074
+Threads: 17
+Threaded Run Pthread (Mutex) Total Count: 17000000
+Pthread Mutex time(ms): 3072
+Threads: 17
+Threaded Run Pthread (Mutex) Total Count: 17000000
+Pthread Mutex time(ms): 3069
+Threads: 18
+Threaded Run Pthread (Mutex) Total Count: 18000000
+Pthread Mutex time(ms): 3245
+Threads: 18
+Threaded Run Pthread (Mutex) Total Count: 18000000
+Pthread Mutex time(ms): 3231
+Threads: 18
+Threaded Run Pthread (Mutex) Total Count: 18000000
+Pthread Mutex time(ms): 3232
+Threads: 18
+Threaded Run Pthread (Mutex) Total Count: 18000000
+Pthread Mutex time(ms): 3230
+Threads: 18
+Threaded Run Pthread (Mutex) Total Count: 18000000
+Pthread Mutex time(ms): 3232
+Threads: 19
+Threaded Run Pthread (Mutex) Total Count: 19000000
+Pthread Mutex time(ms): 3416
+Threads: 19
+Threaded Run Pthread (Mutex) Total Count: 19000000
+Pthread Mutex time(ms): 3109
+Threads: 19
+Threaded Run Pthread (Mutex) Total Count: 19000000
+Pthread Mutex time(ms): 3413
+Threads: 19
+Threaded Run Pthread (Mutex) Total Count: 19000000
+Pthread Mutex time(ms): 3131
+Threads: 19
+Threaded Run Pthread (Mutex) Total Count: 19000000
+Pthread Mutex time(ms): 3382

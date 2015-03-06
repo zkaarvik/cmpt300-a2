@@ -1,0 +1,302 @@
+Usage of: ./mylocks -t #threads -i #itterations -d testid
+testid: 0=all, 1=pthreadMutex, 2=pthreadSpinlock, 3=mySpinLockTAS, 4=mySpinLockTTAS, 5=myMutexTAS, 6=myMutexTTAS
+Threads: 1
+MyMutexTTAS Total Count: 1000000
+MyMutexTTAS time(ms): 22
+Threads: 1
+MyMutexTTAS Total Count: 1000000
+MyMutexTTAS time(ms): 15
+Threads: 1
+MyMutexTTAS Total Count: 1000000
+MyMutexTTAS time(ms): 13
+Threads: 1
+MyMutexTTAS Total Count: 1000000
+MyMutexTTAS time(ms): 13
+Threads: 1
+MyMutexTTAS Total Count: 1000000
+MyMutexTTAS time(ms): 13
+Threads: 2
+MyMutexTTAS Total Count: 2000000
+MyMutexTTAS time(ms): 27
+Threads: 2
+MyMutexTTAS Total Count: 2000000
+MyMutexTTAS time(ms): 37
+Threads: 2
+MyMutexTTAS Total Count: 2000000
+MyMutexTTAS time(ms): 32
+Threads: 2
+MyMutexTTAS Total Count: 2000000
+MyMutexTTAS time(ms): 31
+Threads: 2
+MyMutexTTAS Total Count: 2000000
+MyMutexTTAS time(ms): 38
+Threads: 3
+MyMutexTTAS Total Count: 3000000
+MyMutexTTAS time(ms): 54
+Threads: 3
+MyMutexTTAS Total Count: 3000000
+MyMutexTTAS time(ms): 47
+Threads: 3
+MyMutexTTAS Total Count: 3000000
+MyMutexTTAS time(ms): 43
+Threads: 3
+MyMutexTTAS Total Count: 3000000
+MyMutexTTAS time(ms): 41
+Threads: 3
+MyMutexTTAS Total Count: 3000000
+MyMutexTTAS time(ms): 43
+Threads: 4
+MyMutexTTAS Total Count: 4000000
+MyMutexTTAS time(ms): 64
+Threads: 4
+MyMutexTTAS Total Count: 4000000
+MyMutexTTAS time(ms): 67
+Threads: 4
+MyMutexTTAS Total Count: 4000000
+MyMutexTTAS time(ms): 68
+Threads: 4
+MyMutexTTAS Total Count: 4000000
+MyMutexTTAS time(ms): 64
+Threads: 4
+MyMutexTTAS Total Count: 4000000
+MyMutexTTAS time(ms): 72
+Threads: 5
+MyMutexTTAS Total Count: 5000000
+MyMutexTTAS time(ms): 74
+Threads: 5
+MyMutexTTAS Total Count: 5000000
+MyMutexTTAS time(ms): 91
+Threads: 5
+MyMutexTTAS Total Count: 5000000
+MyMutexTTAS time(ms): 75
+Threads: 5
+MyMutexTTAS Total Count: 5000000
+MyMutexTTAS time(ms): 80
+Threads: 5
+MyMutexTTAS Total Count: 5000000
+MyMutexTTAS time(ms): 77
+Threads: 6
+MyMutexTTAS Total Count: 6000000
+MyMutexTTAS time(ms): 95
+Threads: 6
+MyMutexTTAS Total Count: 6000000
+MyMutexTTAS time(ms): 100
+Threads: 6
+MyMutexTTAS Total Count: 6000000
+MyMutexTTAS time(ms): 95
+Threads: 6
+MyMutexTTAS Total Count: 6000000
+MyMutexTTAS time(ms): 101
+Threads: 6
+MyMutexTTAS Total Count: 6000000
+MyMutexTTAS time(ms): 85
+Threads: 7
+MyMutexTTAS Total Count: 7000000
+MyMutexTTAS time(ms): 120
+Threads: 7
+MyMutexTTAS Total Count: 7000000
+MyMutexTTAS time(ms): 126
+Threads: 7
+MyMutexTTAS Total Count: 7000000
+MyMutexTTAS time(ms): 109
+Threads: 7
+MyMutexTTAS Total Count: 7000000
+MyMutexTTAS time(ms): 120
+Threads: 7
+MyMutexTTAS Total Count: 7000000
+MyMutexTTAS time(ms): 115
+Threads: 8
+MyMutexTTAS Total Count: 8000000
+MyMutexTTAS time(ms): 146
+Threads: 8
+MyMutexTTAS Total Count: 8000000
+MyMutexTTAS time(ms): 138
+Threads: 8
+MyMutexTTAS Total Count: 8000000
+MyMutexTTAS time(ms): 130
+Threads: 8
+MyMutexTTAS Total Count: 8000000
+MyMutexTTAS time(ms): 147
+Threads: 8
+MyMutexTTAS Total Count: 8000000
+MyMutexTTAS time(ms): 132
+Threads: 9
+MyMutexTTAS Total Count: 9000000
+MyMutexTTAS time(ms): 153
+Threads: 9
+MyMutexTTAS Total Count: 9000000
+MyMutexTTAS time(ms): 163
+Threads: 9
+MyMutexTTAS Total Count: 9000000
+MyMutexTTAS time(ms): 138
+Threads: 9
+MyMutexTTAS Total Count: 9000000
+MyMutexTTAS time(ms): 139
+Threads: 9
+MyMutexTTAS Total Count: 9000000
+MyMutexTTAS time(ms): 158
+Threads: 10
+MyMutexTTAS Total Count: 10000000
+MyMutexTTAS time(ms): 177
+Threads: 10
+MyMutexTTAS Total Count: 10000000
+MyMutexTTAS time(ms): 179
+Threads: 10
+MyMutexTTAS Total Count: 10000000
+MyMutexTTAS time(ms): 177
+Threads: 10
+MyMutexTTAS Total Count: 10000000
+MyMutexTTAS time(ms): 182
+Threads: 10
+MyMutexTTAS Total Count: 10000000
+MyMutexTTAS time(ms): 207
+Threads: 11
+MyMutexTTAS Total Count: 11000000
+MyMutexTTAS time(ms): 179
+Threads: 11
+MyMutexTTAS Total Count: 11000000
+MyMutexTTAS time(ms): 229
+Threads: 11
+MyMutexTTAS Total Count: 11000000
+MyMutexTTAS time(ms): 193
+Threads: 11
+MyMutexTTAS Total Count: 11000000
+MyMutexTTAS time(ms): 224
+Threads: 11
+MyMutexTTAS Total Count: 11000000
+MyMutexTTAS time(ms): 181
+Threads: 12
+MyMutexTTAS Total Count: 12000000
+MyMutexTTAS time(ms): 251
+Threads: 12
+MyMutexTTAS Total Count: 12000000
+MyMutexTTAS time(ms): 245
+Threads: 12
+MyMutexTTAS Total Count: 12000000
+MyMutexTTAS time(ms): 232
+Threads: 12
+MyMutexTTAS Total Count: 12000000
+MyMutexTTAS time(ms): 211
+Threads: 12
+MyMutexTTAS Total Count: 12000000
+MyMutexTTAS time(ms): 221
+Threads: 13
+MyMutexTTAS Total Count: 13000000
+MyMutexTTAS time(ms): 274
+Threads: 13
+MyMutexTTAS Total Count: 13000000
+MyMutexTTAS time(ms): 290
+Threads: 13
+MyMutexTTAS Total Count: 13000000
+MyMutexTTAS time(ms): 240
+Threads: 13
+MyMutexTTAS Total Count: 13000000
+MyMutexTTAS time(ms): 324
+Threads: 13
+MyMutexTTAS Total Count: 13000000
+MyMutexTTAS time(ms): 334
+Threads: 14
+MyMutexTTAS Total Count: 14000000
+MyMutexTTAS time(ms): 315
+Threads: 14
+MyMutexTTAS Total Count: 14000000
+MyMutexTTAS time(ms): 299
+Threads: 14
+MyMutexTTAS Total Count: 14000000
+MyMutexTTAS time(ms): 396
+Threads: 14
+MyMutexTTAS Total Count: 14000000
+MyMutexTTAS time(ms): 302
+Threads: 14
+MyMutexTTAS Total Count: 14000000
+MyMutexTTAS time(ms): 324
+Threads: 15
+MyMutexTTAS Total Count: 15000000
+MyMutexTTAS time(ms): 349
+Threads: 15
+MyMutexTTAS Total Count: 15000000
+MyMutexTTAS time(ms): 370
+Threads: 15
+MyMutexTTAS Total Count: 15000000
+MyMutexTTAS time(ms): 327
+Threads: 15
+MyMutexTTAS Total Count: 15000000
+MyMutexTTAS time(ms): 306
+Threads: 15
+MyMutexTTAS Total Count: 15000000
+MyMutexTTAS time(ms): 321
+Threads: 16
+MyMutexTTAS Total Count: 16000000
+MyMutexTTAS time(ms): 331
+Threads: 16
+MyMutexTTAS Total Count: 16000000
+MyMutexTTAS time(ms): 405
+Threads: 16
+MyMutexTTAS Total Count: 16000000
+MyMutexTTAS time(ms): 425
+Threads: 16
+MyMutexTTAS Total Count: 16000000
+MyMutexTTAS time(ms): 427
+Threads: 16
+MyMutexTTAS Total Count: 16000000
+MyMutexTTAS time(ms): 361
+Threads: 17
+MyMutexTTAS Total Count: 17000000
+MyMutexTTAS time(ms): 401
+Threads: 17
+MyMutexTTAS Total Count: 17000000
+MyMutexTTAS time(ms): 384
+Threads: 17
+MyMutexTTAS Total Count: 17000000
+MyMutexTTAS time(ms): 306
+Threads: 17
+MyMutexTTAS Total Count: 17000000
+MyMutexTTAS time(ms): 397
+Threads: 17
+MyMutexTTAS Total Count: 17000000
+MyMutexTTAS time(ms): 444
+Threads: 18
+MyMutexTTAS Total Count: 18000000
+MyMutexTTAS time(ms): 465
+Threads: 18
+MyMutexTTAS Total Count: 18000000
+MyMutexTTAS time(ms): 560
+Threads: 18
+MyMutexTTAS Total Count: 18000000
+MyMutexTTAS time(ms): 435
+Threads: 18
+MyMutexTTAS Total Count: 18000000
+MyMutexTTAS time(ms): 389
+Threads: 18
+MyMutexTTAS Total Count: 18000000
+MyMutexTTAS time(ms): 425
+Threads: 19
+MyMutexTTAS Total Count: 19000000
+MyMutexTTAS time(ms): 498
+Threads: 19
+MyMutexTTAS Total Count: 19000000
+MyMutexTTAS time(ms): 446
+Threads: 19
+MyMutexTTAS Total Count: 19000000
+MyMutexTTAS time(ms): 415
+Threads: 19
+MyMutexTTAS Total Count: 19000000
+MyMutexTTAS time(ms): 437
+Threads: 19
+MyMutexTTAS Total Count: 19000000
+MyMutexTTAS time(ms): 405
+Threads: 20
+MyMutexTTAS Total Count: 20000000
+MyMutexTTAS time(ms): 552
+Threads: 20
+MyMutexTTAS Total Count: 20000000
+MyMutexTTAS time(ms): 466
+Threads: 20
+MyMutexTTAS Total Count: 20000000
+MyMutexTTAS time(ms): 467
+Threads: 20
+MyMutexTTAS Total Count: 20000000
+MyMutexTTAS time(ms): 466
+Threads: 20
+MyMutexTTAS Total Count: 20000000
+MyMutexTTAS time(ms): 524
